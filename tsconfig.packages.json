@@ -21,7 +21,8 @@
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "@scope/ui/*": ["packages/ui/src/*"]
+      "@scope/ui/*": ["packages/ui/src/*"],
+      "@scope/ui": ["packages/ui/src"]
     }
   },
   "exclude": ["node_modules"],

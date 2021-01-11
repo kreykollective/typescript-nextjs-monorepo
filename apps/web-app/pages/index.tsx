@@ -1,6 +1,6 @@
 import Layout from "../components/Layout";
 
-import Bar from "@scope/ui";
+import Bar from "@scope/ui/test";
 
 const IndexPage = () => (
   <Layout title="Home | Next.js + TypeScript Example">

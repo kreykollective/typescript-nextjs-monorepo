@@ -1,6 +1,6 @@
 {
   "name": "@scope/ui",
-  "main": "src/index.tsx",
+  "main": "index.js",
   "scripts": {
     "build": "tsc"
   },
