@@ -8,5 +8,8 @@
   "license": "ISC",
   "peerDependencies": {
     "react": "17.0.1"
+  },
+  "devDependencies": {
+    "react": "17.0.1"
   }
 }
