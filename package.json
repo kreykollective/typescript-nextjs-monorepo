@@ -1,4 +1,5 @@
 {
+  "name": "typescript-nextjs-workspace",
   "private": true,
   "workspaces": {
     "packages": [

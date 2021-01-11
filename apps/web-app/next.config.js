@@ -1,9 +1,21 @@
-const path = require("path");
-const withPlugins = require("next-compose-plugins");
+const withTranspileModules = require("next-transpile-modules");
 
-// https://www.npmjs.com/package/next-transpile-modules
-const withTM = require("next-transpile-modules")(["@scope/ui"]);
+const getTranspileWorkspaces = require("./scripts/getTranspileWorkspaces"); // @x-shipit-disable
 
-module.exports = withPlugins([withTM], {
-  // ...
+const transpileWorkspaces = getTranspileWorkspaces(); // @x-shipit-disable
+// @x-shipit-enable: const transpileWorkspaces = [];
+
+module.exports = withTranspileModules(transpileWorkspaces)({
+  images: {
+    domains: ["images.kiwi.com"],
+  },
+
+  webpack: (config) => {
+    config.module.rules.push({
+      type: "javascript/auto",
+      test: /\.mjs$/,
+    });
+
+    return config;
+  },
 });
